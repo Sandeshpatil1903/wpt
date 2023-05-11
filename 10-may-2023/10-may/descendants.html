@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ * { 
+  display: block;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  padding: 5px;
+  margin: 15px;
+}
+</style>
+<script src="C:\Users\IET\Desktop\WPT suyog ass 10-5-22\jquery-3.6.4.js"></script>
+<script>
+$(document).ready(function(){
+  //$("div").find("span").css({"color": "red", "border": "2px solid red"});
+  $("div")
+     .find("span")
+     .find("span").css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+<div class="descendants" style="width:500px;">div (current element) 
+  <p>p (child)
+    <span>
+        span 1
+    <span> span 2  <span >span3</span></span>
+    </span>   
+  </p>
+  <p>p (child)
+    <span>span (grandchild)</span>
+  </p> 
+</div>
+</body>
+</html>
