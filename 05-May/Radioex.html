@@ -1,0 +1,53 @@
+<html>
+    <head><style>
+        div{ border: 5px;
+            color: brown;
+            font-size:xx-large;
+            font-family: 'Times New Roman', Times, serif;
+            font: 100;
+            padding: 2px;
+            background-color: bisque;
+            width: fit-content;
+            margin-left: 30%;
+            height: fit-content;
+            border-style: groove;
+            background-image: linear-gradient(to bottom right, bisque,white );
+            
+        }
+    </style>
+        <script>
+
+            function f1(choice)
+            {
+                let num=document.getElementById("i1").value
+                
+                let result 
+                switch(choice)
+                {
+                  case 'square': result=num*num
+                  break;
+                  case 'cube': result=num*num*num
+                  break;
+                  case 'same': result=num
+                  break;
+                }
+                document.getElementById("p1").innerHTML=`<b>${result}</b>`
+            }
+        </script>
+
+    </head>
+        <body>
+<div align="center">
+ <pre>
+ <input type="text" id="i1" placeholder="enter a number">
+ <br>
+Square:  <input type="radio" onclick="f1('square')"  id="r1" name="math" >
+Cube:    <input type="radio" onclick="f1('cube')" id="r2" name="math">
+AS it is <input type="radio" onclick="f1('same')"id="r3" name="math">
+<p id="p1" name="Value" style="border-style: groove;width: fit-content; background-color: aliceblue; "></p>                
+ </pre>
+</div>
+
+        </body> 
+    
+</html>

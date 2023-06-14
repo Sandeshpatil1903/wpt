@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script>
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        function f1() {
+            let da = new Date(document.getElementById("d1").value)
+            let cur1 = Date()
+            let cur = new Date(cur1)
+            let dd = da.getDate()
+            let mm = da.getMonth() + 1
+            console.log(mm)
+            let yy = cur.getFullYear()
+            let bd = yy + '-' + mm + '-' + dd
+            let ds = new Date(bd)
+            console.log(ds)
+            console.log(days[ds.getDay()])
+            document.getElementById("p1").innerHTML = `<h1>This year Birthday on ${days[ds.getDay()]}</h1>`
+        }
+    </script>
+</head>
+
+<body align="center" style="border:groove; margin: auto; margin-top: 50px; width: fit-content; height: fit-content;">
+    <div style="background-color: bisque; padding: 5px;">
+        <h1><b>Day of Birthday this year:</b></h1>
+        <label for="d1"> Date :</label><input type="date" onchange="f1()" id="d1">
+        <p id="p1" style="font-size: xx-large;"></p>
+    </div>
+</body>
+
+</html>
