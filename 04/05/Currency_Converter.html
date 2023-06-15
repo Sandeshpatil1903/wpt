@@ -1,0 +1,99 @@
+<html>
+
+<head>
+  <script>
+    function f1() {
+      let element = document.getElementById("p1")
+      let num = document.getElementById("i1").value
+      let str1 = document.getElementById("s1").value
+      let str2 = document.getElementById("s2").value
+
+
+      switch (str1) {
+        case "Dollar":
+
+          if (str2 == "Dollar") {
+
+            element.innerHTML = num.concat(' ', "&#36", ' ', " = ", num, ' ', "&#36")
+
+          }
+          else if (str2 == "Rupees") {
+
+            element.innerHTML = num.concat(' ', "&#36", " = ", num * 80, ' ', "&#8377")
+
+          }
+          else if (str2 == "Euro") {
+
+            element.innerHTML = num.concat(' ', "&#36", " = ", ' ', ' num * (80 / 90), "&#8364")
+
+          }
+          break;
+
+        case "Rupees":
+
+          if (str2 == "Ruppes") {
+
+            element.innerHTML = num.concat(' ', "&#8377", " = ", num, ' ', "&#8377")
+
+          }
+          else if (str2 == "Dollar") {
+
+            element.innerHTML = num.concat(' ', "&#8377", " = ", num / 80, ' ', "&#36")
+
+          }
+          else if (str2 == "Euro") {
+
+            element.innerHTML = num.concat(' ', "&#8377", " = ", num / 90, ' ', "&#8364")
+
+          }
+          break;
+        case "Euro":
+
+          if (str2 == "Euro") {
+
+            element.innerHTML = num.concat(' ', "&#8364", " = ", num, ' ', "&#8364")
+
+          }
+          else if (str2 == "Rupees") {
+
+            element.innerHTML = num.concat(' ', "&#8364", " = ", num * 90, ' ', "&#8377")
+
+          }
+          else if (str2 == "Dollar") {
+
+            element.innerHTML = num.concat(' ', "&#8364", " = ", num * (90 / 80), ' ', "&#36")
+
+          }
+          break;
+
+      }
+
+    }
+  </script>
+</head>
+
+<body background="./images.jpg" style="margin:auto; padding: auto;">
+  <br><br><br><br>
+  <div style="background-color:pink; width: 300px; height: 250px; padding:15px;opacity:65%; ">
+    <h1> <b>Currency Converter: </b></h1>
+    <input type="text" id="i1" placeholder="Enter a number"> <br><br><br>
+    <select id="s1">
+      <option>select</option>
+      <option>Dollar</option>
+      <option>Rupees</option>
+      <option>Euro</option>
+    </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select id="s2">
+      <option>select</option>
+      <option>Dollar</option>
+      <option>Rupees</option>
+      <option>Euro</option>
+    </select>
+    <br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button onClick="f1()"> Convert</button>
+    <p id="p1"></p>
+
+  </div>
+</body>
+
+</html>

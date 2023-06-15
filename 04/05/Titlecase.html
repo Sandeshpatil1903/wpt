@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script>
+        function f1() {
+            let element = document.getElementById("p1")
+            element.innerText = document.getElementById("i1").value.substring(0, 1).toUpperCase().concat(document.getElementById("i1").value.substr(1).toLowerCase())
+        }
+    </script>
+</head>
+
+
+<body align="center" style="border:groove; margin: auto; margin-top: 50px; width: fit-content; height: fit-content;">
+
+    <div style="border: 2px; background-color: bisque; border-style:solid; width: 400px; height: 4 00px;padding:5px; ">
+        <h1>String to TitleCase</h1>
+        <input type="text" value="" placeholder="Enter a string" id="i1">
+
+
+        <p style="border:groove; width: fit-content;"><b id="p1"></b></p>
+
+        <button onClick="f1()">submit</button>
+    </div>
+</body>
+
+</html>
